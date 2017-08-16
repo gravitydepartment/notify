@@ -1,0 +1,103 @@
+/**
+* Gravity Department - Notify
+* https://github.com/gravitydepartment/notify
+*
+* @author     Brendan Falkowski
+* @copyright  2017 Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Notify
+// ==============================================
+
+.notify {
+    display: none;
+    position: fixed; // Directions set by JS
+    z-index: $z-notify;
+    width: 100%;
+    max-width: 400px;
+}
+
+[data-notify-state='active'] {
+    display: block;
+}
+
+
+// ==============================================
+// Notify - Item
+// ==============================================
+
+.notify_item {
+    margin: 10px;
+    padding: 12px 15px;
+    line-height: 1.3em;
+    transition: all 250ms ease-out;
+}
+
+.notify_item--right { transform: translate3d(450px, 0, 0); }
+.notify_item--left  { transform: translate3d(-450px, 0, 0); }
+
+[data-notify-item-state='slide-in'] {
+    transform: translate3d(0, 0, 0);
+}
+
+[data-notify-item-state='fade-out'] {
+    transform: translate3d(0, 0, 0); // Retain initial transformation when status is swapped
+    opacity: 0;
+}
+
+
+// ----------------------------------------------
+// Modifier - Persist
+
+.notify_item--persist {
+    position: relative;
+    padding-right: (10px + 20px + 10px);
+}
+
+.notify_item-close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: $c-button-subtle;
+    color: #FFF;
+    font-family: arial;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    transform: translateY(-50%);
+
+    &:hover,
+    &:active {
+        background: $c-button-subtle-hover;
+        color: #FFF;
+    }
+}
+
+
+
+
+
+
+// **********************************************
+// Notify - Custom Styling
+// **********************************************
+
+.notify_item {
+    border-left: 10px solid #000;
+    border-radius: 3px;
+    background: #FFF;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.1),
+        0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notify_item--danger  { border-left-color: $c-danger; }
+.notify_item--help    { border-left-color: $c-help; }
+.notify_item--info    { border-left-color: $c-info; }
+.notify_item--success { border-left-color: $c-success; }
+.notify_item--warn    { border-left-color: $c-warn; }
