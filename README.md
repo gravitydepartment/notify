@@ -1,6 +1,6 @@
 # GravDept Notify
 
-Simple, clear notifications with useful options.
+Simple notifications with useful options.
 
 [![Gravity Department](http://gravitydept.com/_themes/gravdept/img/logo-footer.png)](http://gravitydept.com/)
 
