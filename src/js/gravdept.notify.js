@@ -16,7 +16,7 @@ var notify = {
         positionX:   'right',  // {string} "right|left"
         positionY:   'bottom', // {string} "top|bottom"
         timeFade:    250,      // {number} milliseconds to fade out
-        timeVisible: 5000     // {number} milliseconds the notification is visible
+        timeVisible: 5000      // {number} milliseconds the notification is visible
     },
 
     // Cache selectors
