@@ -23,7 +23,7 @@ Simple notifications with useful options.
 Include the script in your page:
 
 ```html
-<script src="path/to/gravdept.notify.js"></script>
+<script src="path/to/notify.js"></script>
 ```
 
 Initialize with the options you need:
