@@ -8,6 +8,14 @@
 
 
 // ==============================================
+// Vars
+// ==============================================
+
+$c-notify-close-background-base:  $c-action-secondary-base  !default;
+$c-notify-close-background-hover: $c-action-secondary-hover !default;
+
+
+// ==============================================
 // Notify
 // ==============================================
 
@@ -31,7 +39,7 @@
 .notify_item {
     margin: 10px;
     padding: 20px;
-    line-height: 1.3em;
+    line-height: 1.3;
     transition: all 250ms ease-out;
 }
 
@@ -47,14 +55,18 @@
     opacity: 0;
 }
 
-
 // ----------------------------------------------
-// Modifier - Persist
+// Modifier: Persist
 
 .notify_item--persist {
     position: relative;
     padding-right: (20px + 20px + 10px); // Padding + icon + padding
 }
+
+
+// ==============================================
+// Notify - Item Close
+// ==============================================
 
 .notify_item-close {
     position: absolute;
@@ -63,7 +75,7 @@
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background: $c-button-subtle;
+    background: $c-notify-close-background-base;
     color: #FFF;
     font-family: arial;
     font-size: 20px;
@@ -73,14 +85,10 @@
 
     &:hover,
     &:active {
-        background: $c-button-subtle-hover;
+        background: $c-notify-close-background-hover;
         color: #FFF;
     }
 }
-
-
-
-
 
 
 // **********************************************
