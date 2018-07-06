@@ -89,23 +89,3 @@ $c-notify-close-background-hover: $c-action-secondary-hover !default;
         color: #FFF;
     }
 }
-
-
-// **********************************************
-// Notify - Custom Styling
-// **********************************************
-
-.notify_item {
-    border-left: 10px solid #000;
-    border-radius: 3px;
-    background: #FFF;
-    box-shadow:
-        0 0 0 1px rgba(0, 0, 0, 0.1),
-        0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.notify_item--danger  { border-left-color: $c-danger; }
-.notify_item--help    { border-left-color: $c-help; }
-.notify_item--info    { border-left-color: $c-info; }
-.notify_item--success { border-left-color: $c-success; }
-.notify_item--warn    { border-left-color: $c-warn; }
