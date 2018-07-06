@@ -72,7 +72,8 @@ var notify = {
                 .addClass('notify_item--persist')
                 .append($itemClose);
 
-            $itemClose.on('click', function () {
+            $itemClose.on('click', function (e) {
+                e.preventDefault();
                 var $elem = jQuery(this).parent('.notify_item');
                 _this.dismissElem($elem);
             });
